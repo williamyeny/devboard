@@ -1,4 +1,4 @@
-//var path;
+var path;
 var paths = {};
 var mode = 'brush';
 var lPoint;
@@ -6,24 +6,32 @@ var l;
 var color = 'black';
 
 function onMouseDown(event) {
-//  path = new Path();
+  path = new Path();
   socket.emit('down', {mode:mode, color:color});
   socket.emit('drag', event.point);
-//  path.strokeColor = 'black';
+  path.add(event.point);
+  path.strokeColor = color;
+  if (mode == 'eraser') {
+    path.strokeColor = 'white';
+    path.strokeWidth = 15;
+  }
   lPoint = event.point;
 }
 
 function onMouseDrag(event) {
   
-//  path.add(event.point);
+  
   if (mode == 'brush' || mode == 'eraser') {
     socket.emit('drag', event.point);
+    path.add(event.point);
   }
 }
 
 function onMouseUp(event) {
+  path.add(event.point);
   if (mode == 'line') {
     socket.emit('drag', event.point);
+    
   }
   socket.emit('up');
 }

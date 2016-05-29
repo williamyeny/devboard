@@ -49,15 +49,15 @@ io.on('connection', function(client) {
   
   client.on('down', function(data) {
     console.log(data);
-    io.emit('down', {id:client.id, mode:data.mode, color:data.color});
+    client.broadcast.emit('down', {id:client.id, mode:data.mode, color:data.color});
   });
   
   client.on('up', function() {
-    io.emit('up', client.id);
+    client.broadcast.emit('up', client.id);
   });
    
   client.on('drag', function(data) {
-    io.emit('drag', {id:client.id,point:data});
+    client.broadcast.emit('drag', {id:client.id,point:data});
   });
   
   
