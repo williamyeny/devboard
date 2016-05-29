@@ -1,0 +1,172 @@
+* {
+  margin:0;
+  padding:0;
+  font-family:sans-serif;
+  border-color: #cccccc;
+  color:#333333;
+}
+
+body {
+  background-color:#fbfbfb  ;
+}
+
+#board {
+  width:800px;
+  height:350px;
+  margin:0 auto;
+}
+
+#toolbar {
+  position:absolute;
+  padding:10px;
+  
+}
+
+.tool-button {
+  width:30px;
+  height:30px;
+  border-style:solid;
+  border-width:2px;
+  border-radius:5px;
+  cursor:pointer;
+  margin-bottom:5px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 28px;       /* the same as your div height */
+  opacity:0.5;
+  transition-duration: 0.4s;
+  background-color:white;
+}
+.tool-button:hover {
+  opacity:1;
+  transition-duration: 0.4s;
+}
+
+.tool-button img {
+  width:20px;
+  height:20px;
+  vertical-align: middle;
+}
+
+#container {
+  padding-top:50px;
+}
+
+#canvas-container {
+  
+  margin:0 auto;
+  width:800px;
+  border-style:solid;
+  border-width:2px;
+  border-radius:2px;
+  margin-bottom: 10px;
+  background-color:white;
+}
+
+#chat {
+  width:800px;
+  height: 100px;
+  margin:0 auto;
+  border-style:solid;
+  border-width:2px;
+  border-radius:2px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  background-color:white;
+  overflow-y:auto;
+  padding-top:5px;
+}
+
+#input-form {
+  width:800px;
+  margin:0 auto;
+  border-style: solid;
+  border-width:2px;
+  border-radius:2px;
+  border-top-style: none;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  background-color:white;
+}
+
+#input {
+  border-style:none;
+  width:780px;
+  padding:5px 7px 5px 7px;
+  background-color:white;
+}
+
+h1 {
+  width:800px;
+  margin:0 auto;
+}
+
+li {
+  list-style: none;
+  padding:1px 7px 1px 7px;
+  font-size:12px;
+}
+
+#modal-bg {
+  position:fixed;
+  background-color:black;
+  opacity:0.5;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+
+#modal {
+  position:fixed;
+  width:200px;
+  top:50%;
+  margin-top:-100px;
+  left:50%;
+  margin-left:-150px;
+  background-color:white;
+  border-style:solid;
+  border-width: 1px;
+  border-color:white;
+  border-radius: 2px;
+  padding:49px;
+  text-align:right;
+}
+
+#modal input {
+  width:185px;
+  margin:0 auto;
+  margin-bottom:10px;
+  padding:2px 4px 2px 4px;
+  border-style: solid;
+}
+
+#modal a {
+  padding:3px 5px 3px 5px;
+  background-color:#2196F3;
+  color:white;
+  font-weight: 600;
+  border-style: solid;
+  border-width:2px;
+  border-radius:2px;
+  border-color:#2196F3;
+  cursor:pointer;
+  transition-duration: 0.25s;
+}
+
+#modal a:hover {
+  background-color:white;
+  color:#2196F3;
+  transition-duration: 0.25s;
+}
+
+.name {
+  font-weight:600;
+  margin-right:5px;
+}
+
+#black { background-color:black;}
+#red {background-color: red;}
+#blue {background-color:blue;}
+#green {background-color:green;}
+#grey {background-color:grey;}

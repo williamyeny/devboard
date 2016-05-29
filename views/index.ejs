@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>devboard</title>
+  <link href='css/style.css' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <script src="/socket.io/socket.io.js"></script>
+  <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+  <script src='js/paper.js'></script>
+  <script src='js/modal.js'></script>
+  <script src='js/chat.js'></script>
+  <script type="text/paperscript" src='js/board.js' canvas="board"></script>
+</head>
+  <body>
+    
+    <div id='container'>
+      <h1>devboard</h1>
+      <div id='canvas-container'>
+        <div id='toolbar'>
+          <div id='brush' class='tool-button mode'><img src='img/brush.png'></div>
+          <div id='line' class='tool-button mode'><img src='img/line.png'></div>
+          <div id='eraser' class='tool-button mode'><img src='img/eraser.png'></div>
+          <div class='tool-button color' id='black'></div>
+          <div class='tool-button color' id='red'></div>
+          <div class='tool-button color' id='blue'></div>
+          <div class='tool-button color' id='green'></div>
+          <div class='tool-button color' id='grey'></div>
+        </div>
+        <canvas id='board' keepalive="true" data-paper-keepalive="true"></canvas>
+      </div>
+      <div id='chat'></div>
+      <form id='input-form'>
+        <input type='text' placeholder='type your message here' id='input'>
+      </form>
+    </div>
+    <div id='modal-bg'>
+      <div id='modal'>
+        <input type='text' id='name'><br>
+        <a class='button' id='submit-name'>submit</a>
+        
+      </div>
+    </div>
+  </body>
+</html>
